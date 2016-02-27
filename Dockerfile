@@ -10,3 +10,4 @@ RUN /bin/herokuish buildpack install \
 ONBUILD ADD . /app
 ONBUILD RUN /build
 ONBUILD RUN mkdir -p /cache
+ONBUILD CMD ["/start", "web"]
