@@ -7,6 +7,6 @@ RUN /bin/herokuish buildpack install \
   && ln -s /bin/herokuish /build \
     && ln -s /bin/herokuish /start \
       && ln -s /bin/herokuish /exec
-ADD . /app
-RUN /build
-RUN mkdir -p /cache
+ONBUILD ADD . /app
+ONBUILD RUN /build
+ONBUILD RUN mkdir -p /cache
