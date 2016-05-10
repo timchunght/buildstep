@@ -7,7 +7,7 @@ RUN /bin/herokuish buildpack install \
   && ln -s /bin/herokuish /build \
     && ln -s /bin/herokuish /start \
       && ln -s /bin/herokuish /exec
-ONBUILD ADD . /app
-ONBUILD RUN /build
+ONBUILD ADD . /app 
+ONBUILD RUN touch /app/.env && set -a && . /app/.env && /build
 ONBUILD RUN mkdir -p /cache
 ONBUILD CMD ["/start", "web"]
