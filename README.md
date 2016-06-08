@@ -1,9 +1,13 @@
 # timchunght/buildstep
 ---
 
+The ``Dockerfile`` in this repository is the source file for the base image. To use the image for your own project, you do not need to build the base image. Please refer to ``Usage`` Section for more information.
+
+## Usage:
+
 Heroku like Buildstep using Herokuish CLI and Docker; more flexible than timchunght/cedar or convox/cedar
 
-Add ``timchunght/buildstep`` to your ``Dockerfile``
+Add ``FROM timchunght/buildstep`` to your ``Dockerfile``
 
 ### Build:
 
